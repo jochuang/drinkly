@@ -13,19 +13,22 @@ class DrinkDisplay extends Component {
 
     componentDidMount() {
         // const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
-        const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka'
+        // const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka'
 
-        axios.get(url)
-            .then(res => {
-                const cocktail = res.data.drinks
-                console.log(cocktail)
-                this.setState({data: cocktail})
-            })
-            .catch((e) => console.log(e))
+        // axios.get(url)
+        //     .then(res => {
+        //         const cocktail = res.data.drinks
+        //         console.log(cocktail)
+        //         this.setState({data: cocktail})
+        //     })
+            //.catch((e) => console.log(e))
 
-        fetch('/api')
+        fetch('/api', {})
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log('this is from backend', data)
+                this.setState({data: data})
+            })
         
     };
 
