@@ -13,6 +13,7 @@ module.exports = {
             template: './client/index.html'
         })
     ],
+    mode: process.env.NODE_ENV,
 
     module: {
         rules: [
@@ -39,6 +40,12 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
     devServer: {
+        port: 8080,
+        host: 'localhost',
+        static: {
+            // where it is being served from
+            directory: path.join(__dirname, 'client')
+        },
         proxy: {
             '/api/**': {
                 target: 'http://localhost:3000/',
