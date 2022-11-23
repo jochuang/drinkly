@@ -23,7 +23,9 @@ class DrinkDisplay extends Component {
         //     })
             //.catch((e) => console.log(e))
 
-        fetch('/api', {})
+        fetch('/api', {
+            headers: {}
+        })
             .then(res => res.json())
             .then(data => {
                 console.log('this is from backend', data)
