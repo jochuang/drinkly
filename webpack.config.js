@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 module.exports = {
   
     entry: './client/index.js',
@@ -11,7 +12,8 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: './client/index.html'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin(),
     ],
     mode: process.env.NODE_ENV,
 

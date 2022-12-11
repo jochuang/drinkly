@@ -3,11 +3,9 @@ import React, { Component } from 'react';
 class DrinkCard extends Component {
     constructor(props) {
         super(props);
-        // this.state: {};
     }
 
     render() {
-   
         return (
             <div className="drink-card">
                 <div className="drink-name">{this.props.name}</div>
@@ -16,5 +14,4 @@ class DrinkCard extends Component {
         )
     }
 };
-
 export default DrinkCard;
