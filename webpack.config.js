@@ -26,6 +26,11 @@ module.exports = {
                     },
                 },
             },
+            {
+                test: /.(css|scss)$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader','sass-loader'],
+            },
         ],
     },
 
@@ -33,4 +38,12 @@ module.exports = {
         // Enable importing JS / JSX files without specifying their extension
         extensions: ['.js', '.jsx'],
     },
+    devServer: {
+        proxy: {
+            '/api/**': {
+                target: 'http://localhost:3000/',
+                secure: false,
+            },
+        }
+    }
 }
