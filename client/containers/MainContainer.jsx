@@ -11,7 +11,7 @@ class MainContainer extends Component {
         return(
             <div className="main-container">
                <h1>Drinkly</h1>
-               <QueryContainer />
+               {/* <QueryContainer /> */}
                <DrinkDisplay />
             </div>
         )
