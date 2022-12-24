@@ -22,6 +22,10 @@ class DrinkDisplay extends Component {
                 this.setState({data: cocktail})
             })
             .catch((e) => console.log(e))
+
+        fetch('/api')
+            .then(res => res.json())
+            .then(data => console.log(data))
         
     };
 

@@ -13,6 +13,12 @@ class App extends Component {
     }
 
     // componentDidMount() {
+    //     fetch('/api')
+    //         .then(res => res.json())
+    //         .then(data => console.log(data))
+    // }
+    
+    // componentDidMount() {
     //     const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
     //     axios.get(url)
     //         .then(res => {
